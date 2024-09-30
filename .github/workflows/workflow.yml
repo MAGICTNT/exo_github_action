@@ -1,0 +1,19 @@
+name: Workflow
+
+on: push
+jobs:
+  mon_job:
+    run_on: ubuntu-latest
+    steps:
+      - name: Réculeration de notre App
+        user: actions/checkout@v4
+
+      - name: installation des dependance
+        run : npm install
+
+      - name: build de l'app
+        run: npm run build
+      
+      - name: test
+        run: npm run test
+      
