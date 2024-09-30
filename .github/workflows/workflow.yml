@@ -3,7 +3,7 @@ name: Workflow
 on: push
 jobs:
   mon_job:
-    run_on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Réculeration de notre App
         uses: actions/checkout@v4
